@@ -80,6 +80,7 @@ export class RunDetailsPipeline extends Component {
         };
         let provider;
         const stepScrollAreaClass = `step-scroll-area ${this.augmenter.karaoke ? 'follow-along-on' : 'follow-along-off'}`;
+        console.log(run);
         if (this.augmenter.isFreeStyle) {
             provider = (<Extensions.Renderer {
                     ...{
