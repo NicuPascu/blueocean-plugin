@@ -28,6 +28,9 @@ export default class RunMessageCell extends Component {
             message = (<span className="RunMessageCell" title={run.description}><span className="RunMessageCellInner">{run.description}</span></span>);
         } else if (showCommitMessage) {
             const commitMsg = run.changeSet[run.changeSet.length - 1].msg;
+            if (run.changeSet[run.changeSet.length - 1].issues) {
+                console.log(run.changeSet[run.changeSet.length - 1].issues);
+            }
             if (run.changeSet.length > 1) {
                 return (
                     <span className="RunMessageCell" title={commitMsg}>
